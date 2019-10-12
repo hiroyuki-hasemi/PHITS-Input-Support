@@ -3,29 +3,35 @@
 	"name": "PHITS",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#section"
 		},
 		{
-			"include": "#strings"
+			"include": "#comments"
+		},
+		{
+			"include": "#num"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"section": {
 			"patterns": [{
-				"name": "keyword.control.phits",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.phits",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.phits",
-					"match": "\\\\."
+				"match": "^\\[.*?\\]",
+				"name": "constant.character"
 				}
 			]
+		},
+		"comments":{
+			"patterns": [{
+				"match": "#.*",
+				"name": "comment.line"
+				}
+			]
+		},
+		"num":{
+			"patterns": [{
+				"match": "-?[0-9]+",
+				"name" : "constant.numeric"
+			}]
 		}
 	},
 	"scopeName": "sample.inp"
