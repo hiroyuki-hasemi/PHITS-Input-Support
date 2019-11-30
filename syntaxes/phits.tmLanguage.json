@@ -14,6 +14,9 @@
 			"patterns": [
 				{
 					"include": "#full_line_comment"
+				},
+				{
+					"include": "#section"
 				}
 			]
 		},
@@ -26,6 +29,16 @@
 				}
 			]
 		},
+
+		"section": {
+			"patterns": [
+				{
+					"name": "constant.character",
+					"match": "^\\[.+\\]"
+				}
+			]
+		},
+
 		"inline_comment": {
 			"patterns": [
 				{
@@ -38,7 +51,7 @@
 			"patterns": [
 				{
 					"name": "comment.line",
-					"match": "[\\$].*"
+					"match": "\\$.*"
 				}
 			]
 		}
