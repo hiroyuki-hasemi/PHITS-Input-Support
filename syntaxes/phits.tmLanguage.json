@@ -1,38 +1,46 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "PHITS",
+	"scopeName": "sample.inp",
 	"patterns": [
 		{
-			"include": "#section"
-		},
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#num"
+			"include": "#statments"
 		}
 	],
 	"repository": {
-		"section": {
-			"patterns": [{
-				"match": "^\\[.*?\\]",
-				"name": "constant.character"
+
+		"statments":
+		{
+			"patterns": [
+				{
+					"include": "#full_line_comment"
 				}
 			]
 		},
-		"comments":{
-			"patterns": [{
-				"match": "#.*",
-				"name": "comment.line"
+
+		"full_line_comment": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash",
+					"match": "^[cC\\$\\#].*$"
 				}
 			]
 		},
-		"num":{
-			"patterns": [{
-				"match": "-?[0-9]+",
-				"name" : "constant.numeric"
-			}]
+		"inline_comment": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "[\\$\\#].*"
+				}
+			]
+		},
+		"inline_comment_cell": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "[\\$].*"
+				}
+			]
 		}
-	},
-	"scopeName": "sample.inp"
+	}
 }
