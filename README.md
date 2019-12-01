@@ -15,8 +15,6 @@ PHITSインプットファイル作成用Visual Studio Code Extension
     - set
     - infl
 
-![caputure](images/capture1.png)
-
 ### Snippets
 
 TBD
