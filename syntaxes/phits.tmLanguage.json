@@ -1,38 +1,159 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "PHITS",
+	"scopeName": "sample.inp",
 	"patterns": [
 		{
-			"include": "#section"
-		},
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#num"
+			"include": "#statments"
 		}
 	],
 	"repository": {
+
+		"statments":
+		{
+			"patterns": [
+				{
+					"include": "#full_line_comment"
+				},
+				{
+					"include": "#section_off"
+				},
+				{
+					"include": "#section"
+				},
+				{
+					"include": "#except_cell"
+				},
+				{
+					"include": "#mat"
+				},
+				{
+					"include": "#infl"
+				},
+				{
+					"include": "#set"
+				},
+				{
+					"include": "#const"
+				},
+				{
+					"include": "#param"
+				},
+				{
+					"include": "#num"
+				},
+				{
+					"include": "#inline_comment"
+				}
+			]
+		},
+
+		"full_line_comment": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash",
+					"match": "^[cC\\$\\#].*$"
+				}
+			]
+		},
+
 		"section": {
-			"patterns": [{
-				"match": "^\\[.*?\\]",
-				"name": "constant.character"
+			"patterns": [
+				{
+					"name": "constant.character",
+					"match": "^\\[.+\\]"
 				}
 			]
 		},
-		"comments":{
-			"patterns": [{
-				"match": "#.*",
-				"name": "comment.line"
+
+		"section_off": {
+			"patterns": [
+				{
+					"name": "invalid.illegal",
+					"match": "^\\[.+\\]off"
 				}
 			]
 		},
-		"num":{
-			"patterns": [{
-				"match": "-?[0-9]+",
-				"name" : "constant.numeric"
-			}]
+
+		"param": {
+			"patterns": [
+				{
+					"name": "variable.parameter",
+					"match": "[a-zA-Z_]+"
+				}
+			]
+		},
+
+		"num": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "-?[0-9]+\\.?[0-9]*[eE]?[-\\+]?[0-9]*"
+				}
+			]
+		},
+
+		"mat": {
+			"patterns": [
+				{
+					"name": "string.quoted.double",
+					"match": "[mM][0-9]+\\s+|[mM][tT][0-9]+\\s+|[mM][aA][tT]\\["
+				}
+			]
+		},
+
+		"infl": {
+			"patterns": [
+				{
+					"name": "constant.regexp",
+					"match": "infl:"
+				}
+			]
+		},
+
+		"set": {
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "set:"
+				}
+			]
+		},
+
+		"const": {
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "[cC][0-9]+"
+				}
+			]
+		},
+
+		"except_cell": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\#\\(?[-0-9]+"
+				}
+			]
+
+		},
+
+		"inline_comment": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "[\\$\\#].*"
+				}
+			]
+		},
+		"inline_comment_cell": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "\\$.*"
+				}
+			]
 		}
-	},
-	"scopeName": "sample.inp"
+	}
 }
