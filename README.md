@@ -1,12 +1,21 @@
 # PHITS in Visula Studio Code
 
-This extension adds support for the PHITS input file to Visual Studio Code.
+PHITSインプットファイル作成用Visual Studio Code Extension
 
-## Features
+## 機能
 
-### Colorization
+### シンタックスハイライト
 
-TBD
+- セクションタイトル
+- パラメータ
+- コメント
+- 定数
+- 特定のセクション等で用いるキーワード
+    - m, mat
+    - set
+    - infl
+
+![caputure](images/capture1.png)
 
 ### Snippets
 
