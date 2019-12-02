@@ -16,7 +16,7 @@ PHITSインプットファイル作成用Visual Studio Code Extension
     - infl
     - tr
 
-![capture](images/capture1.png)
+![capture](https://github.com/hiroyuki-hasemi/PHITS-Input-Support/blob/images/capture1.PNG)
 
 ### Snippets
 
