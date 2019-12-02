@@ -14,7 +14,14 @@ PHITSインプットファイル作成用Visual Studio Code Extension
     - m, mat
     - set
     - infl
+    - tr
+
+![capture](images/capture1.png)
 
 ### Snippets
 
-TBD
+未定
+
+## 備考
+
+- デフォルトのカラーテーマ（Default Dark+）でないとうまく色分けされない場合があります。
