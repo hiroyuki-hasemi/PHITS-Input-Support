@@ -28,6 +28,9 @@
 					"include": "#mat"
 				},
 				{
+					"include": "#transform"
+				},
+				{
 					"include": "#infl"
 				},
 				{
@@ -86,6 +89,15 @@
 				{
 					"name": "string.quoted.double",
 					"match": "[mM][0-9]+\\s+|[mM][tT][0-9]+\\s+|[mM][aA][tT]\\["
+				}
+			]
+		},
+
+		"transform": {
+			"patterns": [
+				{
+					"name": "variable.parameter",
+					"match": "\\*?[tT][rR][0-9]+\\s+"
 				}
 			]
 		},
