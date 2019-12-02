@@ -37,9 +37,6 @@
 					"include": "#const"
 				},
 				{
-					"include": "#param"
-				},
-				{
 					"include": "#num"
 				},
 				{
@@ -71,15 +68,6 @@
 				{
 					"name": "invalid.illegal",
 					"match": "^\\[.+\\]off"
-				}
-			]
-		},
-
-		"param": {
-			"patterns": [
-				{
-					"name": "variable.parameter",
-					"match": "[a-zA-Z_]+"
 				}
 			]
 		},
