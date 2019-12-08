@@ -46,6 +46,9 @@
 					"include": "#intrinsic_function"
 				},
 				{
+					"include": "#const_pi"
+				},
+				{
 					"include": "#inline_comment"
 				}
 			]
@@ -141,6 +144,15 @@
 			]
 		},
 
+		"const_pi": {
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "[pP][iI]"
+				}
+			]
+		},
+		
 		"except_cell": {
 			"patterns": [
 				{
