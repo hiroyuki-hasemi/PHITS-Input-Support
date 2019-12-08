@@ -52,7 +52,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.double-slash",
-					"match": "^[cC\\$\\#].*$"
+					"match": "^[\\$\\#\\!\\%].*$|^[cC] .*$"
 				}
 			]
 		},
@@ -143,7 +143,7 @@
 			"patterns": [
 				{
 					"name": "comment.line",
-					"match": "[\\$\\#].*"
+					"match": "[\\$\\#\\!\\%].*"
 				}
 			]
 		},
@@ -151,7 +151,7 @@
 			"patterns": [
 				{
 					"name": "comment.line",
-					"match": "\\$.*"
+					"match": "[\\$\\!\\%].*"
 				}
 			]
 		}
