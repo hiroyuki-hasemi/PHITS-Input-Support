@@ -10,6 +10,7 @@ PHITSインプットファイル作成用Visual Studio Code Extension
 - パラメータ
 - コメント
 - 定数
+- 数式
 - 特定のセクション等で用いるキーワード
     - m, mat
     - set
