@@ -43,6 +43,9 @@
 					"include": "#num"
 				},
 				{
+					"include": "#intrinsic_function"
+				},
+				{
 					"include": "#inline_comment"
 				}
 			]
@@ -125,6 +128,15 @@
 				{
 					"name": "constant.character.escape",
 					"match": "[cC][0-9]+"
+				}
+			]
+		},
+
+		"intrinsic_function": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "float|int|abs|exp|log|log10|max|min|mod|nint|sign|sqrt|acos|asin|atan|atan2|cos|cosh|sin|sinh|tan|tanh"
 				}
 			]
 		},
