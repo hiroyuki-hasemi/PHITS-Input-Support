@@ -58,7 +58,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.double-slash",
-					"match": "^[\\$\\#\\!\\%].*$|^[cC] .*$"
+					"match": "^[\\$\\#\\!\\%].*$|^(?i)c .*$"
 				}
 			]
 		},
@@ -76,7 +76,7 @@
 			"patterns": [
 				{
 					"name": "invalid.illegal",
-					"match": "^\\[.+\\]off"
+					"match": "^\\[.+\\](?i)(off)"
 				}
 			]
 		},
@@ -85,7 +85,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "-?[0-9]+\\.?[0-9]*[eE]?[-\\+]?[0-9]*"
+					"match": "-?[0-9]+\\.?[0-9]*(?i)e?[-\\+]?[0-9]*"
 				}
 			]
 		},
@@ -94,7 +94,7 @@
 			"patterns": [
 				{
 					"name": "string.quoted.double",
-					"match": "[mM][0-9]+\\s+|[mM][tT][0-9]+\\s+|[mM][aA][tT]\\["
+					"match": "(?i)m[0-9]+\\s+|(?i)(mt)[0-9]+\\s+|(?i)(mat)(?=\\[)"
 				}
 			]
 		},
@@ -103,7 +103,7 @@
 			"patterns": [
 				{
 					"name": "variable.parameter",
-					"match": "\\*?[tT][rR][0-9]+\\s+"
+					"match": "\\*?(?i)(tr)[0-9]+\\s+"
 				}
 			]
 		},
@@ -112,7 +112,7 @@
 			"patterns": [
 				{
 					"name": "constant.regexp",
-					"match": "infl:"
+					"match": "(?i)(infl):"
 				}
 			]
 		},
@@ -121,7 +121,7 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape",
-					"match": "set:"
+					"match": "(?i)(set):"
 				}
 			]
 		},
@@ -130,7 +130,7 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape",
-					"match": "[cC][0-9]+"
+					"match": "(?i)c[0-9]+"
 				}
 			]
 		},
@@ -139,7 +139,7 @@
 			"patterns": [
 				{
 					"name": "support.function",
-					"match": "\\W(?i)(float|int|abs|exp|log|log10|max|min|mod|nint|sign|sqrt|acos|asin|atan|atan2|cos|cosh|sin|sinh|tan|tanh)\\W"
+					"match": "(?<!\\w)(?i)(float|int|abs|exp|log|log10|max|min|mod|nint|sign|sqrt|acos|asin|atan|atan2|cos|cosh|sin|sinh|tan|tanh)(?!\\w)"
 				}
 			]
 		},
@@ -148,7 +148,7 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape",
-					"match": "\\W(?i)pi\\W"
+					"match": "(?<!\\w)(?i)pi(?!\\w)"
 				}
 			]
 		},
