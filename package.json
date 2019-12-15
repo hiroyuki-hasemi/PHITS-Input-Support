@@ -7,7 +7,7 @@
     },
     "displayName": "PHITS-input-support",
     "description": "Syntax hightlighting for PHITS input file",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "engines": {
         "vscode": "^1.39.0"
     },
