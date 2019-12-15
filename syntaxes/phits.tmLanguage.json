@@ -94,7 +94,7 @@
 			"patterns": [
 				{
 					"name": "string.quoted.double",
-					"match": "(?i)m[0-9]+\\s+|(?i)(mt)[0-9]+\\s+|(?i)(mat)\\["
+					"match": "(?i)m[0-9]+\\s+|(?i)(mt)[0-9]+\\s+|(?i)(mat)(?=\\[)"
 				}
 			]
 		},
